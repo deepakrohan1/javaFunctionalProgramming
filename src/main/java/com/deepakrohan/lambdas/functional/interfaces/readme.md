@@ -34,13 +34,39 @@
         }
     
   
-  3. Consumer
-  4. Supplier
-  5. BiFunction <br/>
+  * Consumer <br/>
   
-  Takes two inputs and returns output of type R
+    Accepts parameters but returns no results
+  
+  
   
   ````
+  List<Thread> threads = 
+                        Arrays.asList(new Thread("Larry"),
+                        Arrays.asList(new Thread("Curly"),
+                        Arrays.asList(new Thread("Moe"));
+   threads.forEach(System.out::println)
+   threads.sort(Compartor.comparing(Thread.getName));
+   
+  ````
+  
+  
+  
+  * Supplier <br/>
+    Returns a value takes no input
+    
+ ```$xslt
+public interfaces Supplier<T> {
+    T get();
+    }
+```
+  
+  
+  * BiFunction <br/>
+  
+    Takes two inputs and returns output of type R
+  
+  ```
   public interface BiFunction <T, U, R> {
     R apply (T t , U u)
   {
@@ -57,3 +83,11 @@
    
    iqMap.replaceAll((k,v) -> v - 50);
    //replaceAll thread safe
+   
+   ````
+   ##Summary
+   __Different types of Methods__
+   * Default Methods
+   * Static Methods
+   * Instance Methods
+   * Abstract Methods _[If they override java.lang.Object]_
