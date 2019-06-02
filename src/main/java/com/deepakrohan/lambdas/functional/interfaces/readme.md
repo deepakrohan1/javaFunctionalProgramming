@@ -4,7 +4,7 @@
   * Predicate <br/>
     A Predicate is a test that returns true or false
     
-    
+    ```
     
     public interface Predicate <T> {boolean test (T t) }
     
@@ -19,10 +19,11 @@
     iqMpa.enrtySet().removeIf(entry -> enttry.getValue() <= 100);
     System.out.println(iqMap)
     
+    ```
     
   * Function<br/>
   
-  
+  ```
     public interface Function<T, R> { R apply (T,t)}
     
     Map<Integer, Integer> primeCache = new ConcurrentHashMap<>();
@@ -32,7 +33,7 @@
     Integer primeChecker (Integer primeCandidate) {
         ../ Returns 0 if the number is prime or the smallest factor if number isn`t
         }
-    
+   ``` 
   
   * Consumer <br/>
   
@@ -85,7 +86,7 @@ public interfaces Supplier<T> {
    //replaceAll thread safe
    
    ````
-   ##Summary
+   ## Summary
    __Different types of Methods__
    * Default Methods
    * Static Methods
