@@ -32,6 +32,13 @@ public class MethodReferences {
         //Using Lambda
         Arrays.sort(nameArray, ((o1,o2) ->  o1.compareToIgnoreCase(o2));
 
+        //Method references
+        Arrays.sort(nameArray, String::compareToIgnoreCase);
+
+        /**
+         *
+         */
+
 
     }
 }
