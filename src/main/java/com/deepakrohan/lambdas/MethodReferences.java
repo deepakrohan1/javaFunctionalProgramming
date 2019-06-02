@@ -3,6 +3,7 @@ package com.deepakrohan.lambdas;
 
 import java.util.Arrays;
 import java.util.Comparator;
+import java.util.stream.Stream;
 
 /**
  * Method References
@@ -30,14 +31,20 @@ public class MethodReferences {
         });
 
         //Using Lambda
-        Arrays.sort(nameArray, ((o1,o2) ->  o1.compareToIgnoreCase(o2));
+        Arrays.sort(nameArray, ((o1,o2) ->  o1.compareToIgnoreCase(o2)));
 
         //Method references
         Arrays.sort(nameArray, String::compareToIgnoreCase);
 
         /**
-         *
+         * printing the elements of an array
          */
+
+        System.out.println(Arrays.asList(nameArray));
+
+        Arrays.asList(nameArray).forEach(System.out::println);
+
+        Stream.of(nameArray).forEach(System.out::println);
 
 
     }
